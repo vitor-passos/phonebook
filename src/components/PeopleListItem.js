@@ -7,14 +7,12 @@ const PeopleListItem = props => {
     const { first, last, title } = people.name;
     const onPressElement = () => {
         onPressItemtoDetail({ people })
-        console.log('ok ', first);
     }
     return (
         <TouchableOpacity onPress={onPressElement}>
             <View style={styles.line}>
                 <Image style={styles.avatar} source={{ uri: people.picture.thumbnail }} />
-                <Text style={styles.lineText}>{`${capitalizeFirstLetter(first)
-                    } ${capitalizeFirstLetter(last)}`}</Text>
+                <Text style={styles.lineText}>{`${first} ${last}`}</Text>
             </View >
         </TouchableOpacity>
 

@@ -14,7 +14,18 @@ function App() {
           options={stylesOptions.headerStyleMain}
         />
         <Stack.Screen name="PeopleDetail" component={PeopleDetailPage}
-          options={stylesOptions.headerStyleDetailPeople}
+          options={(route) => {
+            const { people } = route.route.params;
+            return ({
+              title: `${people.name.first} ${people.name.last}`,
+              headerTintColor: 'white',
+              headerStyle: {
+                backgroundColor: '#348feb',
+                borderBottomWidth: 1,
+                borderBottomColor: '#C5C5C5'
+              }
+            })
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -26,16 +37,6 @@ const stylesOptions = {
     title: 'Pessoas',
     headerTintColor: 'white',
     headerTitleStyle: { flexGrow: 1, textAlign: 'center' },
-    headerStyle: {
-      backgroundColor: '#348feb',
-      borderBottomWidth: 1,
-      borderBottomColor: '#C5C5C5'
-    }
-  },
-  headerStyleDetailPeople: {
-    title: 'Detalhes',
-    headerTintColor: 'white',
-    headerTitleStyle: {},
     headerStyle: {
       backgroundColor: '#348feb',
       borderBottomWidth: 1,

@@ -26,7 +26,6 @@ export default class PeoplePage extends React.Component {
             <View>
                 <PeopleList peoples={this.state.peoples}
                     onPressItem={pageDetails => {
-                        console.log(pageDetails)
                         this.props.navigation.navigate('PeopleDetail', pageDetails);
                     }}
                 />
