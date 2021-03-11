@@ -13,9 +13,9 @@ export default class PeopleDetailPage extends React.Component {
                     <LineDetail label="Email" content={people.email} />
                     <LineDetail label="Cidade" content={people.location.city} />
                     <LineDetail label="Estado" content={people.location.state} />
-                    <LineDetail label="Tel" content={people.phone} />
-                    <LineDetail label="Cel" content={people.cell} />
-                    <LineDetail label="Nacionalidade" content={people.nat} />
+                    <LineDetail label="Telefone" content={people.phone} />
+                    <LineDetail label="Celular" content={people.cell} />
+                    <LineDetail label="País" content={people.nat} />
                 </View>
             </View>
         )

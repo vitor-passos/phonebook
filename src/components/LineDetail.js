@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 
-const LineDetail = ({ label, content }) => {
+const LineDetail = ({ label = "", content = "-" }) => {
     return (
         <View style={styles.line}>
             <Text style={[styles.cell, styles.label]}>{label}</Text>
-            <Text style={styles.cell}>{content}</Text>
+            <Text style={[styles.cell, styles.content]}>{content}</Text>
         </View>
     )
 }
@@ -22,7 +22,11 @@ const styles = StyleSheet.create({
         paddingLeft: 5
     },
     label: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        flex: 1
+    },
+    content: {
+        flex: 3
     }
 })
 
