@@ -1,6 +1,6 @@
 # phonebook
 
-Projeto que utiliza a api 'randomuser.me' para criar uma lista de contatos e navegar pela tela de detalhes de cada contato.
+Projeto que utiliza a api 'randomuser.me' para criar uma lista de contatos e navega pela tela de detalhes de cada.
 #
 
 Esse projeto utiliza o yarn como gerenciador de pacotes </br> 
